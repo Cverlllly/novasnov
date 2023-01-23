@@ -24,7 +24,7 @@ namespace novasnov
 
             if (Player1State == Player2State)
             {
-                MessageBox.Show("draw");
+                //draw
             }
             else if (Player1State == 0 && Player2State == 1)
             {

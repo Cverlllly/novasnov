@@ -37,12 +37,20 @@ namespace novasnov
         private void button1_Click(object sender, EventArgs e)
         {
             game.Play();
-            label1.Text = game.Player1Score.ToString();
-            label2.Text = game.Player2Score.ToString();
-            label3.Text = Game.Player1HighScore.ToString();
-            label4.Text = Game.Player2HighScore.ToString();
+            label1.Text = "Player 1 score: " + game.Player1Score.ToString();
+            label2.Text = "Player 2 score: " + game.Player2Score.ToString();
+            label3.Text = "Player 1 highscore: " + Game.Player1HighScore.ToString();
+            label4.Text = "Player 2 highscore: " + Game.Player2HighScore.ToString();
             pictureBox1.LoadAsync(game.Player1State.ToString() + ".png");
             pictureBox2.LoadAsync(game.Player2State.ToString() + ".png");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            game.Player1Score = 0;
+            game.Player2Score = 0;
+            label1.Text = "Player 1 score: " + game.Player1Score.ToString();
+            label2.Text = "Player 2 score: " + game.Player2Score.ToString();
         }
     }
 }
