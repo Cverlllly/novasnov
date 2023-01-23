@@ -41,10 +41,8 @@ namespace novasnov
             label2.Text = game.Player2Score.ToString();
             label3.Text = Game.Player1HighScore.ToString();
             label4.Text = Game.Player2HighScore.ToString();
-            if (game.Player1State==0)
-            {
-                pictureBox1.Image = Image.FromFile("rock1.paper");
-            }
+            pictureBox1.LoadAsync(game.Player1State.ToString() + ".png");
+            pictureBox2.LoadAsync(game.Player2State.ToString() + ".png");
         }
     }
 }

@@ -8,11 +8,12 @@ namespace novasnov
 {
     internal class HelperClass
     {
-        public static Random rand { get; set; }
+        public static Random rand = new Random();
         
         public static int GetState()
         {
-            return rand.Next(0, 3);
+            int rand_value = Convert.ToInt32(rand.Next(0, 3));
+            return rand_value;
         }
     }
 }

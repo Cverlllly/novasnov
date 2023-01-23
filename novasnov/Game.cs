@@ -12,32 +12,16 @@ namespace novasnov
     {
         public int Player1Score { get; set; }
         public int Player2Score { get; set; }
-        public int Player1State
-        {
-            get
-            {
-                return HelperClass.GetState();
-            }
-            set
-            {
-                Player1State = HelperClass.GetState();
-            }
-        }
-        public int Player2State{
-            get
-            {
-                return HelperClass.GetState();
-            }
-            set
-            {
-                Player2State=HelperClass.GetState();
-            }
-        }
+        public int Player1State{get; set;}
+        public int Player2State{ get; set; }
         public static int Player1HighScore { get; set; }
         public static int Player2HighScore { get; set; }
 
         public void Play()
         {
+            Player1State = HelperClass.GetState();
+            Player2State = HelperClass.GetState();
+
             if (Player1State == Player2State)
             {
                 MessageBox.Show("draw");
@@ -66,7 +50,7 @@ namespace novasnov
             {
                 Player1Score++;
             }
-            else if (Player1Score > Player1HighScore)
+            if (Player1Score > Player1HighScore)
             {
                 Player1HighScore = Player1Score;
             }

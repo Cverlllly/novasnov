@@ -97,7 +97,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::novasnov.Properties.Resources.rock1;
             this.pictureBox2.Location = new System.Drawing.Point(365, 142);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(205, 208);
@@ -107,7 +106,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::novasnov.Properties.Resources.scissors1;
             this.pictureBox1.Location = new System.Drawing.Point(30, 142);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(202, 208);
